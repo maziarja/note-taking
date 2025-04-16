@@ -1,26 +1,116 @@
 @import "tailwindcss";
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Colors */
+  --color-red-500: #fb3748;
+  --color-red-100: #ffd5d8;
+  --color-green-500: #21c16b;
+  --color-green-100: #d1fbe9;
+  --color-blue-700: #2547d0;
+  --color-blue-500: #335cff;
+  --color-blue-50: #ebf1ff;
+  --color-neutral-950: #0e121b;
+  --color-neutral-900: #191b25;
+  --color-neutral-800: #232530;
+  --color-neutral-700: #2b303b;
+  --color-neutral-600: #525866;
+  --color-neutral-500: #717784;
+  --color-neutral-400: #99a0ae;
+  --color-neutral-300: #cacfd8;
+  --color-neutral-200: #e0e4ea;
+  --color-neutral-100: #f3f5f8;
+  --color-neutral-50: #f5f7fa;
+  --color-neutral-0: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Dark Theme */
+[data-theme="dark"] {
+  --color-red-500: #fb3748;
+  --color-red-100: #ffd5d8;
+  --color-green-500: #21c16b;
+  --color-green-100: #d1fbe9;
+  --color-blue-700: #2547d0;
+  --color-blue-500: #335cff;
+  --color-blue-50: #ebf1ff;
+  --color-neutral-0: #0e121b;
+  --color-neutral-50: #191b25;
+  --color-neutral-100: #232530;
+  --color-neutral-200: #2b303b;
+  --color-neutral-300: #525866;
+  --color-neutral-400: #717784;
+  --color-neutral-500: #99a0ae;
+  --color-neutral-600: #cacfd8;
+  --color-neutral-700: #e0e4ea;
+  --color-neutral-800: #f3f5f8;
+  --color-neutral-900: #f5f7fa;
+  --color-neutral-950: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Typography */
+@layer components {
+  .text-preset-1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.5px;
+  }
+
+  .text-preset-2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.5px;
+  }
+  .text-preset-3 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.3px;
+  }
+  .text-preset-4 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -0.2px;
+  }
+  .text-preset-5 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -0.2px;
+  }
+  .text-preset-6 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: -0.2px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 6px solid theme("colors.neutral.500");
+    border-right-color: theme("colors.neutral.200");
+    animation: rotate 1s infinite linear;
+  }
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid theme("--color-neutral-300");
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
 }
