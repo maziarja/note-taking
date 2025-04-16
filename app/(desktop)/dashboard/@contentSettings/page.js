@@ -1,4 +1,4 @@
-import ContentSettingsContent from "./contentSettingsContent";
+import ContentSettingsContent from "./ContentSettingsContent";
 
 async function Page() {
   return (
