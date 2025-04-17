@@ -24,12 +24,7 @@ function ActionContent({ note }) {
     if (result) setShowModal2(false);
     if (result)
       toast.success(
-        <Toast
-          onClick={() => toast.dismiss()}
-          title={"Note archived."}
-          link={"/archive"}
-          linkDescription={"Archived Notes"}
-        />,
+        <Toast onClick={() => toast.dismiss()} title={"Note archived."} />,
         {
           duration: 3000,
           style: {
@@ -66,8 +61,6 @@ function ActionContent({ note }) {
         <Toast
           onClick={() => toast.dismiss()}
           title={"Note restored to active notes."}
-          link={"/"}
-          linkDescription={"All Notes"}
         />,
         {
           duration: 3000,

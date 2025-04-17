@@ -19,7 +19,7 @@ function ThemeProvider({ children }) {
       theme === "system" ? (isDarkMode ? "dark" : "light") : theme;
     document.documentElement.setAttribute("data-theme", finalTheme);
 
-    if (theme === "dark") setDarkMode(true);
+    if (finalTheme === "dark") setDarkMode(true);
     else setDarkMode(false);
 
     setColorState(theme);

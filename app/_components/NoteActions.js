@@ -55,7 +55,11 @@ function NoteActions({ noteId, isArchived }) {
 
   async function handleDeleteNote() {
     const result = await deleteNote(noteId);
-    router.push(prevPage);
+    if (searchParams.get("from").startsWith("/tags")) {
+      router.push("/home");
+    } else {
+      router.push(prevPage);
+    }
     if (result) {
       setShowModal1(false);
       toast.success(

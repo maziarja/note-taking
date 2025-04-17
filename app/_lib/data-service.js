@@ -49,6 +49,22 @@ export async function getNotes(userId) {
     .from("notes")
     .select("*")
     .eq("userId", userId)
+    .eq("isArchived", false)
+    .order("lastEdited", { ascending: false });
+
+  if (error) {
+    console.error(error.message);
+    throw new Error("Can not get notes");
+  }
+
+  return notes;
+}
+
+export async function getAllNotes(userId) {
+  const { data: notes, error } = await supabase
+    .from("notes")
+    .select("*")
+    .eq("userId", userId)
     .order("lastEdited", { ascending: false });
 
   if (error) {

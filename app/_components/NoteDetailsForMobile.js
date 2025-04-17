@@ -40,7 +40,7 @@ async function NoteDetailsForMobile({
                 clipRule="evenodd"
               />
             </svg>
-            <p className="text-preset-6 text-neutral-700 sm:text-[14px]">
+            <p className="text-preset-6 text-neutral-700 sm:text-[16px]">
               Tags
             </p>
           </div>
@@ -72,11 +72,11 @@ async function NoteDetailsForMobile({
                 />
               </svg>
 
-              <p className="text-preset-6 text-neutral-700 sm:text-[14px]">
+              <p className="text-preset-6 text-neutral-700 sm:text-[16px]">
                 Status
               </p>
             </div>
-            <p className="text-preset-6 text-neutral-700 sm:text-[14px]">
+            <p className="text-preset-6 text-neutral-700 sm:text-[16px]">
               Archived
             </p>
           </div>
@@ -104,11 +104,11 @@ async function NoteDetailsForMobile({
                 fill="var(--color-neutral-700)"
               />
             </svg>
-            <p className="text-preset-6 text-neutral-700 sm:text-[14px]">
+            <p className="text-preset-6 text-neutral-700 sm:text-[16px]">
               Last edited
             </p>
           </div>
-          <p className="text-preset-6 text-neutral-700 sm:text-[14px]">
+          <p className="text-preset-6 text-neutral-700 sm:text-[16px]">
             {formattedDate(lastEdited, false)}
           </p>
         </div>

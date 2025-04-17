@@ -76,15 +76,19 @@
   }
   .text-preset-5 {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 120%;
     letter-spacing: -0.2px;
+    transform: scale(0.875);
+    transform-origin: left top;
   }
   .text-preset-6 {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 120%;
     letter-spacing: -0.2px;
+    transform: scale(0.875);
+    transform-origin: left top;
   }
 }
 

@@ -80,7 +80,7 @@ function CreateNote() {
                   clipRule="evenodd"
                 />
               </svg>
-              <p className="text-preset-6 text-neutral-700 sm:text-[14px]">
+              <p className="text-preset-6 text-neutral-700 sm:text-[16px]">
                 Tags
               </p>
             </div>
@@ -88,7 +88,7 @@ function CreateNote() {
               <textarea
                 required
                 name="tags"
-                className="text-preset-6 w-full resize-none text-neutral-700 outline-0 sm:text-[14px]"
+                className="text-preset-6 w-full resize-none text-neutral-700 outline-0 sm:text-[16px]"
                 type="text"
                 placeholder="Add tags seperated by commas or space (e.g. Work, Planning)"
               />
@@ -116,13 +116,13 @@ function CreateNote() {
                   fill="var(--color-neutral-700)"
                 />
               </svg>
-              <p className="text-preset-6 text-neutral-700 sm:text-[14px]">
+              <p className="text-preset-6 text-neutral-700 sm:text-[16px]">
                 Last edited
               </p>
             </div>
             <input
               disabled
-              className="text-preset-6 text-neutral-700 outline-0 sm:text-[14px]"
+              className="text-preset-6 text-neutral-700 outline-0 sm:text-[16px]"
               type="text"
               placeholder="Not yet saved"
             />
@@ -132,7 +132,7 @@ function CreateNote() {
         <textarea
           required
           name="content"
-          className="text-preset-6 field-sizing-content h-[350px] w-full resize-none whitespace-pre-line text-neutral-700 outline-0 sm:text-[14px]"
+          className="text-preset-6 field-sizing-content h-[490px] w-full resize-none whitespace-pre-line text-neutral-700 outline-0 sm:text-[16px]"
           type="text"
           placeholder="Start typing your note here..."
         />

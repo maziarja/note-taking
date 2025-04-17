@@ -14,7 +14,7 @@ function NoteTags({ tags }) {
 
   return (
     <input
-      className="text-preset-6 w-full text-neutral-700 outline-0 sm:text-[14px]"
+      className="text-preset-6 w-full text-neutral-700 outline-0 sm:text-[16px]"
       type="text"
       value={typeof newTag === "object" ? newTag.join(", ") : newTag}
       onChange={(e) => setNewTag(e.target.value)}
